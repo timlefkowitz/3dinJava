@@ -2,13 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Display extends Canvas implements Runnable {
-    private Thread tjread;
+    private Thread thread;
     private JFrame frame;
     private static String title = "3D Renderer";
     private static final int WIDTH = 800;
     private static final int HEIGHT = 600;
     private static boolean running = false;
-    private Thread thread;
+
 
     public Display() {
         this.frame = new JFrame();
