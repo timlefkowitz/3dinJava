@@ -57,8 +57,17 @@ public class Display extends Canvas implements Runnable {
             }
 
             render();
-            update();
+            frames++;
+
+            if(System.currentTimeMillis() - timer > 1000)
+            {
+                timer += 1000;
+                this.frame.setTitle(title + " | " + frames + " fps");
+                frames = 0;
+            }
+
         }
+        stop();
     }
 
     private void render(){
